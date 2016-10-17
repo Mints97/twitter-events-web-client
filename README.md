@@ -21,6 +21,10 @@ This app requires PHP with the minimum version 5.6.* and MySQL (recommended mini
 The unit tests in test/ also require PHPUnit ([phpunit.de](https://phpunit.de/)) to be installed.
 A regular LAMP (Linux, Apache, MySQL, PHP) setup is highly recommended.
 
+### Installation location
+
+The files for this app should be installed to the root folder of your webserver in order for it to work properly.
+
 ### Setting up the database
 
 Start by setting your MySQL database info (server, db name, db user credentials) in **backend/db_config.php**.
