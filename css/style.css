@@ -1,0 +1,192 @@
+body {
+}
+
+#menu {
+    padding-top: 0.5vh;
+    padding-bottom: 0.1vh;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 10px 10px 50px #777777;
+    margin-bottom: 5vh;
+}
+
+#menu ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 5%;
+    float-left: none;
+}
+
+.tweetsPane {
+    padding: 2px;
+    height:500px;
+    width:430px;
+    background-color:grey;
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    float:right;
+    box-shadow: 10px 10px 50px #777777;
+}
+
+#map {
+    height:500px;
+    width:600px;
+    float:left;
+}
+
+#loginPanel {
+    font-family: sans-serif;
+    letter-spacing: 0.25px;
+    word-spacing: 3px;
+    line-height: 130%;
+    font-size: 1em;
+    font-weight: 600;
+    
+    padding: 2.5%;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    background: #F8F8F0;
+    border-radius: 10px;
+    text-align: center;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    box-shadow: 10px 10px 50px #777777;
+}
+#loginPanel table{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 1vh;
+}
+
+h3 {
+    margin-top: 10vh;
+    font-size: 60px;
+    font-family: helvetica;
+    color: #1e62d0;
+    text-align:center;
+    background-color:#F8F8F0;
+    border-radius: 5px;
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    box-shadow: 10px 10px 50px #777777;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+}
+
+h4 {
+    font-size: 20px;
+    font-family: helvetica;
+}
+
+#loginBackground {
+    background-image: url(http://pctechmag.com/wp-content/uploads/2015/07/Google-Maps.png);
+}
+
+#tweets table {
+    border-collapse: collapse;
+}
+
+#tweets tr {
+    border-bottom: 1px solid white;
+    padding: 1%;
+}
+
+#tweets td {
+    width: 50%;
+}
+
+#tweets table tr:last-child {
+}
+
+.button {
+	-moz-box-shadow:inset 0px 1px 0px 0px #97c4fe;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #97c4fe;
+	box-shadow:inset 0px 1px 0px 0px #97c4fe;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #3d94f6), color-stop(1, #1e62d0));
+	background:-moz-linear-gradient(top, #3d94f6 5%, #1e62d0 100%);
+	background:-webkit-linear-gradient(top, #3d94f6 5%, #1e62d0 100%);
+	background:-o-linear-gradient(top, #3d94f6 5%, #1e62d0 100%);
+	background:-ms-linear-gradient(top, #3d94f6 5%, #1e62d0 100%);
+	background:linear-gradient(to bottom, #3d94f6 5%, #1e62d0 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#3d94f6', endColorstr='#1e62d0',GradientType=0);
+	background-color:#3d94f6;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #337fed;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #1570cd;
+}
+.button:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #1e62d0), color-stop(1, #3d94f6));
+	background:-moz-linear-gradient(top, #1e62d0 5%, #3d94f6 100%);
+	background:-webkit-linear-gradient(top, #1e62d0 5%, #3d94f6 100%);
+	background:-o-linear-gradient(top, #1e62d0 5%, #3d94f6 100%);
+	background:-ms-linear-gradient(top, #1e62d0 5%, #3d94f6 100%);
+	background:linear-gradient(to bottom, #1e62d0 5%, #3d94f6 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e62d0', endColorstr='#3d94f6',GradientType=0);
+	background-color:#1e62d0;
+}
+.button:active {
+	position:relative;
+	top:1px;
+}
+
+button {
+	-moz-box-shadow:inset 0px 1px 0px 0px #d9fbbe;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #d9fbbe;
+	box-shadow:inset 0px 1px 0px 0px #d9fbbe;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #b8e356), color-stop(1, #a5cc52));
+	background:-moz-linear-gradient(top, #b8e356 5%, #a5cc52 100%);
+	background:-webkit-linear-gradient(top, #b8e356 5%, #a5cc52 100%);
+	background:-o-linear-gradient(top, #b8e356 5%, #a5cc52 100%);
+	background:-ms-linear-gradient(top, #b8e356 5%, #a5cc52 100%);
+	background:linear-gradient(to bottom, #b8e356 5%, #a5cc52 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#b8e356', endColorstr='#a5cc52',GradientType=0);
+	background-color:#b8e356;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #83c41a;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #86ae47;
+}
+button:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #a5cc52), color-stop(1, #b8e356));
+	background:-moz-linear-gradient(top, #a5cc52 5%, #b8e356 100%);
+	background:-webkit-linear-gradient(top, #a5cc52 5%, #b8e356 100%);
+	background:-o-linear-gradient(top, #a5cc52 5%, #b8e356 100%);
+	background:-ms-linear-gradient(top, #a5cc52 5%, #b8e356 100%);
+	background:linear-gradient(to bottom, #a5cc52 5%, #b8e356 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#a5cc52', endColorstr='#b8e356',GradientType=0);
+	background-color:#a5cc52;
+}
+button:active {
+	position:relative;
+	top:1px;
+}
