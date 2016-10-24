@@ -13,7 +13,7 @@ EOD;
     
     public function getEvent($lat, $lng) {
         $json = <<<EOD
-        {"id":3820,"tweets":[{"id":787354984702619648,"idStr":"787354984702619648","text":"We're #hiring! Click to apply: Salesperson - https://t.co/yg8NJFGSUR #Job #Automotive #Albany, GA #Jobs #CareerArc","hashtags":["hiring","Jobs","CareerArc","Job","Automotive","Albany"],"lat":31.5763214,"lng":-84.1756637,"timestamp":1476555031358,"userIdStr":"180442164","userScreenName":"tmj_GA_auto"}],"hashtag":"albany","lat":31.5763214,"lng":-84.1756637,"available":1,"returned":1,"nextAvailable":1476555031358}
+        {"id":3820,"tweets":[{"id":463440424141459456,"idStr":"463440424141459456","text":"Sunsets don&#8217;t get much better than this one over <a href=\\"https://twitter.com/GrandTetonNPS\\">@GrandTetonNPS</a>. <a href=\\"https://twitter.com/hashtag/nature?src=hash\\">#nature</a><a href=\\"https://twitter.com/hashtag/sunset?src=hash\\">#sunset</a><a href=\\"http://t.co/YuKy2rcjyU\\">pic.twitter.com/YuKy2rcjyU</a>","hashtags":["nature","sunset"],"lat":31.5763214,"lng":-84.1756637,"timestamp":1476555031358,"userIdStr":"180442164","userScreenName":"Interior"}, {"id":787354984702619648,"idStr":"787354984702619648","text":"We're #hiring! Click to apply: Salesperson - https://t.co/yg8NJFGSUR #Job #Automotive #Albany, GA #Jobs #CareerArc","hashtags":["hiring","Jobs","CareerArc","Job","Automotive","Albany"],"lat":31.5763214,"lng":-84.1756637,"timestamp":1476555031358,"userIdStr":"180442164","userScreenName":"tmj_GA_auto"}],"hashtag":"albany","lat":31.5763214,"lng":-84.1756637,"available":1,"returned":1,"nextAvailable":1476555031358}
 EOD;
         return new Event(json_decode($json));
     }

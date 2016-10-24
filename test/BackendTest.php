@@ -15,6 +15,14 @@ class BackendTest extends TestCase {
         $this->assertEquals($expected, (string) $tweet);
     }
     
+    public function testTweetInvalidJSON() {
+        $expected = '{"embed_code":"' . "<blockquote class='twitter-tweet' data-lang='en'><p lang='en' dir='ltr'>An error occured fetching tweet!</p>&mdash;  @ <a href=''>00:00:00</a>" . '</blockquote>"}';
+        
+        $tweet = new Tweet(NULL);
+        
+        $this->assertEquals($expected, (string) $tweet);
+    }
+    
     public function testCell_getLat() {
         $lat = 10;
         
@@ -36,6 +44,11 @@ class BackendTest extends TestCase {
         $this->assertEquals($str, (string) $cell);
     }
     
+    public function testCellInvalidJSON() {
+        $cell = new Cell(NULL);
+        $this->assertEquals('{"lat":0,"lng":0}', (string) $cell);
+    }
+    
     public function testCellCollectionNoCells() {
         $str = '{"cells":[]}';
         
@@ -54,6 +67,13 @@ class BackendTest extends TestCase {
         $str = '{"cells":[{"lat":0,"lng":0}, {"lat":1,"lng":1}]}';
         
         $cellCollection = new CellCollection(json_decode($str));
+        $this->assertEquals($str, (string) $cellCollection);
+    }
+    
+    public function testCellCollectionInvalidJSON() {
+        $str = '{"cells":[]}';
+        
+        $cellCollection = new CellCollection(NULL);
         $this->assertEquals($str, (string) $cellCollection);
     }
     
@@ -78,6 +98,13 @@ class BackendTest extends TestCase {
         $expected = '{"tweets":[' . '{"embed_code":"' . "<blockquote class='twitter-tweet' data-lang='en'><p lang='en' dir='ltr'>tweet text</p>&mdash;  @user <a href='https://twitter.com/user/status/1234'>October 16, 2016</a></blockquote>" . '"}' . ', ' . '{"embed_code":"' . "<blockquote class='twitter-tweet' data-lang='en'><p lang='en' dir='ltr'>tweet2 text</p>&mdash;  @user2 <a href='https://twitter.com/user2/status/12345'>October 16, 2016</a></blockquote>" . '"}' . '], "hashtag":"tag"}';
         
         $event = new Event(json_decode($str));
+        $this->assertEquals($expected, (string) $event);
+    }
+    
+    public function testEventInvalidJSON() {
+        $expected = '{"tweets":[{"embed_code":"' . "<blockquote class='twitter-tweet' data-lang='en'><p lang='en' dir='ltr'>An error occured fetching tweet!</p>&mdash;  @ <a href=''>00:00:00</a>" . '</blockquote>"}], "hashtag":"An error occured fetching event!"}';
+        
+        $event = new Event(NULL);
         $this->assertEquals($expected, (string) $event);
     }
 }

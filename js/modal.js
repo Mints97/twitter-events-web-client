@@ -1,9 +1,9 @@
 function displayModal(modalId) {
     var modal = document.getElementById(modalId);
     
-    modal.style.display = "block";
-    
     loadTwitterWidgets(modalId + "Data");
+    
+    modal.style.display = "block";
 
     // Get the <span> element that closes the modal
     var span = document.getElementById(modalId + "Close");

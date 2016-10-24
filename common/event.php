@@ -1,4 +1,8 @@
 <?php
+function is_iterable($var) {
+    return (is_array($var) || $var instanceof Traversable);
+}
+
 class Tweet {
     private $id = "";
     private $text = "";
@@ -7,15 +11,20 @@ class Tweet {
     private $datetime;
     
     public function __construct($tweetData) { // takes decoded events server JSON tweet object as parameter
-        $this->id = $tweetData->idStr;
-        $this->text = str_replace('"', '\"',
-                            str_replace("\n", "\\n",
-                                str_replace("\r\n", "\\n", 
-                                    str_replace("\\", "\\\\", $tweetData->text))));
-                                    
-        $this->screenName = $tweetData->userScreenName;
-        $this->url = "https://twitter.com/$this->screenName/status/$this->id";
-        $this->datetime = gmdate('F j, Y', $tweetData->timestamp);
+        if (isset($tweetData->idStr) && isset($tweetData->text) && isset($tweetData->userScreenName)) {
+            $this->id = $tweetData->idStr;
+            $this->text = str_replace('"', '\"',
+                                str_replace("\n", "\\n",
+                                    str_replace("\r\n", "\\n", 
+                                        str_replace("\\", "\\\\", $tweetData->text))));
+                                        
+            $this->screenName = $tweetData->userScreenName;
+            $this->url = "https://twitter.com/$this->screenName/status/$this->id";
+        } else {
+            $this->text = "An error occured fetching tweet!";
+        }
+        
+        $this->datetime = isset($tweetData->timestamp) ? gmdate('F j, Y', $tweetData->timestamp) : "00:00:00";
     }
     
     // generates an embed code for the tweet
@@ -25,12 +34,14 @@ class Tweet {
 }
 
 class Cell {
-    private $lat = 0.0;
-    private $lng = 0.0;
+    private $lat = 0;
+    private $lng = 0;
     
     public function __construct($cell) { // takes decoded events server JSON cell object as parameter
-        $this->lat = $cell->lat;
-        $this->lng = $cell->lng;
+        if (isset($cell->lat) && isset($cell->lng)) {
+            $this->lat = $cell->lat;
+            $this->lng = $cell->lng;
+        }
     }
     
     public function getLat() {
@@ -50,8 +61,10 @@ class CellCollection {
     private $cells = array();
     
     public function __construct($cells) { // takes decoded events server JSON cells collection object as parameter
-        foreach ($cells->cells as $cell) {
-            $this->cells[] = new Cell($cell);
+        if (isset($cells->cells) && is_iterable($cells->cells)) {
+            foreach ($cells->cells as $cell) {
+                $this->cells[] = new Cell($cell);
+            }
         }
     }
     
@@ -74,11 +87,16 @@ class Event {
     private $top_tweets = array();
     
     public function __construct($event) { // takes decoded events server JSON event object as parameter
-        $this->cell = new Cell($event);
-        $this->hashtag = $event->hashtag;
-        
-        foreach ($event->tweets as $tweet) {
-            $this->top_tweets[] = new Tweet($tweet);
+        if (isset($event->hashtag) && isset($event->tweets) && is_iterable($event->tweets)) {
+            $this->cell = new Cell($event);
+            $this->hashtag = $event->hashtag;
+            
+            foreach ($event->tweets as $tweet) {
+                $this->top_tweets[] = new Tweet($tweet);
+            }
+        } else {
+            $this->top_tweets[] = new Tweet(NULL);
+            $this->hashtag = "An error occured fetching event!";
         }
     }
     

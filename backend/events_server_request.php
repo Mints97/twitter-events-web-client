@@ -12,25 +12,39 @@ class EventsServerRequest implements IEventsServerRequest { // uses events serve
     
     private $maxTweets = "10";
     
+    private $context;
+    
+    public function __construct() {
+        $this->context = stream_context_create(
+            array(
+                'http' => array(
+                    'timeout' => 1  // 1 second timeout
+                )
+            )
+        );
+    }
+    
     public function getCells() {
-        $json = file_get_contents($this->hostName . "/v2/data/cells");
+        $json = @file_get_contents($this->hostName . "/v2/data/cells", false, $this->context);
         return new CellCollection(json_decode($json));
     }
     
     public function getEvent($lat, $lng) {
-        $json = file_get_contents($this->hostName . "/v2/data/events?latlng=" . $lat . "%2C" . $lng . "&count=1");
+        $json = @file_get_contents($this->hostName . "/v2/data/events?latlng=" . $lat . "%2C" . $lng . "&count=1",
+                                        false, $this->context);
         $decoded = json_decode($json);
         
-        if (count($decoded->events) != 1) {
-            return '{"tweets":[], "hashtag":""}'; // error!
+        if (!isset($decoded->events) || count($decoded->events) != 1) {
+            return new Event(NULL); // error!
         }
 
-        $json = file_get_contents("$this->hostName/v2/data/event/" . $decoded->events[0] . "?count=$this->maxTweets");
+        $json = @file_get_contents("$this->hostName/v2/data/event/" . $decoded->events[0] . "?count=$this->maxTweets",
+                                        false, $this->context);
         return new Event(json_decode($json));
     }
     
     public function getStatistics(){
-        $json = file_get_contents($this->hostName . "/v2/stats/data");
+        $json = @file_get_contents($this->hostName . "/v2/stats/data", false, $this->context);
         return '{"num_tweets":' . json_decode($json)->global_tweets . ',"num_events":' . json_decode($json)->global_events . "}";
     }
 }

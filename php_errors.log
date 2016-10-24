@@ -33604,3 +33604,103 @@
 [16-Oct-2016 18:26:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/backend/events_server_provider.php:0
 [16-Oct-2016 18:26:49 UTC] PHP   2. EventsServerRequest->getStatistics() /home/ubuntu/workspace/backend/events_server_provider.php:39
 [16-Oct-2016 18:26:49 UTC] PHP   3. file_get_contents() /home/ubuntu/workspace/backend/events_server_request.php:33
+[21-Oct-2016 03:29:48 UTC] PHP Warning:  file_get_contents(http://54.191.15.168/v2/data/cells): failed to open stream: Connection timed out in /home/ubuntu/workspace/backend/events_server_request.php on line 16
+[21-Oct-2016 03:29:48 UTC] PHP Warning:  file_get_contents(http://54.191.15.168/v2/stats/data): failed to open stream: Connection timed out in /home/ubuntu/workspace/backend/events_server_request.php on line 33
+[21-Oct-2016 03:29:48 UTC] PHP Stack trace:
+[21-Oct-2016 03:29:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/backend/events_server_provider.php:0
+[21-Oct-2016 03:29:48 UTC] PHP Stack trace:
+[21-Oct-2016 03:29:48 UTC] PHP   2. EventsServerRequest->getCells() /home/ubuntu/workspace/backend/events_server_provider.php:27
+[21-Oct-2016 03:29:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/backend/events_server_provider.php:0
+[21-Oct-2016 03:29:48 UTC] PHP   2. EventsServerRequest->getStatistics() /home/ubuntu/workspace/backend/events_server_provider.php:40
+[21-Oct-2016 03:29:48 UTC] PHP   3. file_get_contents() /home/ubuntu/workspace/backend/events_server_request.php:16
+[21-Oct-2016 03:29:48 UTC] PHP   3. file_get_contents() /home/ubuntu/workspace/backend/events_server_request.php:33
+[21-Oct-2016 03:29:48 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/common/event.php on line 53
+[21-Oct-2016 03:29:48 UTC] PHP Stack trace:
+[21-Oct-2016 03:29:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/backend/events_server_provider.php:0
+[21-Oct-2016 03:29:48 UTC] PHP   2. EventsServerRequest->getCells() /home/ubuntu/workspace/backend/events_server_provider.php:27
+[21-Oct-2016 03:29:48 UTC] PHP   3. CellCollection->__construct() /home/ubuntu/workspace/backend/events_server_request.php:17
+[21-Oct-2016 03:30:12 UTC] PHP Warning:  file_get_contents(http://54.191.15.168/v2/data/cells): failed to open stream: Connection timed out in /home/ubuntu/workspace/backend/events_server_request.php on line 16
+[21-Oct-2016 03:30:12 UTC] PHP Stack trace:
+[21-Oct-2016 03:30:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/backend/events_server_provider.php:0
+[21-Oct-2016 03:30:12 UTC] PHP   2. EventsServerRequest->getCells() /home/ubuntu/workspace/backend/events_server_provider.php:27
+[21-Oct-2016 03:30:12 UTC] PHP   3. file_get_contents() /home/ubuntu/workspace/backend/events_server_request.php:16
+[21-Oct-2016 03:30:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/common/event.php on line 53
+[21-Oct-2016 03:30:12 UTC] PHP Stack trace:
+[21-Oct-2016 03:30:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/backend/events_server_provider.php:0
+[21-Oct-2016 03:30:12 UTC] PHP   2. EventsServerRequest->getCells() /home/ubuntu/workspace/backend/events_server_provider.php:27
+[21-Oct-2016 03:30:12 UTC] PHP   3. CellCollection->__construct() /home/ubuntu/workspace/backend/events_server_request.php:17
+[21-Oct-2016 03:30:12 UTC] PHP Warning:  file_get_contents(http://54.191.15.168/v2/stats/data): failed to open stream: Connection timed out in /home/ubuntu/workspace/backend/events_server_request.php on line 33
+[21-Oct-2016 03:30:12 UTC] PHP Stack trace:
+[21-Oct-2016 03:30:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/backend/events_server_provider.php:0
+[21-Oct-2016 03:30:12 UTC] PHP   2. EventsServerRequest->getStatistics() /home/ubuntu/workspace/backend/events_server_provider.php:40
+[21-Oct-2016 03:30:12 UTC] PHP   3. file_get_contents() /home/ubuntu/workspace/backend/events_server_request.php:33
+[21-Oct-2016 14:06:04 UTC] PHP Warning:  file_get_contents(http://54.191.15.168/v2/data/cells): failed to open stream: Connection timed out in /home/ubuntu/workspace/backend/events_server_request.php on line 16
+[21-Oct-2016 14:06:04 UTC] PHP Warning:  file_get_contents(http://54.191.15.168/v2/stats/data): failed to open stream: Connection timed out in /home/ubuntu/workspace/backend/events_server_request.php on line 33
+[21-Oct-2016 14:06:04 UTC] PHP Stack trace:
+[21-Oct-2016 14:06:04 UTC] PHP Stack trace:
+[21-Oct-2016 14:06:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/backend/events_server_provider.php:0
+[21-Oct-2016 14:06:04 UTC] PHP   2. EventsServerRequest->getCells() /home/ubuntu/workspace/backend/events_server_provider.php:27
+[21-Oct-2016 14:06:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/backend/events_server_provider.php:0
+[21-Oct-2016 14:06:04 UTC] PHP   3. file_get_contents() /home/ubuntu/workspace/backend/events_server_request.php:16
+[21-Oct-2016 14:06:04 UTC] PHP   2. EventsServerRequest->getStatistics() /home/ubuntu/workspace/backend/events_server_provider.php:40
+[21-Oct-2016 14:06:04 UTC] PHP   3. file_get_contents() /home/ubuntu/workspace/backend/events_server_request.php:33
+[21-Oct-2016 14:06:04 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/common/event.php on line 53
+[21-Oct-2016 14:06:04 UTC] PHP Stack trace:
+[21-Oct-2016 14:06:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/backend/events_server_provider.php:0
+[21-Oct-2016 14:06:04 UTC] PHP   2. EventsServerRequest->getCells() /home/ubuntu/workspace/backend/events_server_provider.php:27
+[21-Oct-2016 14:06:04 UTC] PHP   3. CellCollection->__construct() /home/ubuntu/workspace/backend/events_server_request.php:17
+[23-Oct-2016 18:49:47 UTC] PHP Warning:  file_get_contents(http://54.191.15.168/v2/data/cells): failed to open stream: Connection timed out in /home/ubuntu/workspace/backend/events_server_request.php on line 16
+[23-Oct-2016 18:49:47 UTC] PHP Warning:  file_get_contents(http://54.191.15.168/v2/stats/data): failed to open stream: Connection timed out in /home/ubuntu/workspace/backend/events_server_request.php on line 33
+[23-Oct-2016 18:49:48 UTC] PHP Stack trace:
+[23-Oct-2016 18:49:48 UTC] PHP Stack trace:
+[23-Oct-2016 18:49:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/backend/events_server_provider.php:0
+[23-Oct-2016 18:49:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/backend/events_server_provider.php:0
+[23-Oct-2016 18:49:48 UTC] PHP   2. EventsServerRequest->getStatistics() /home/ubuntu/workspace/backend/events_server_provider.php:40
+[23-Oct-2016 18:49:48 UTC] PHP   2. EventsServerRequest->getCells() /home/ubuntu/workspace/backend/events_server_provider.php:27
+[23-Oct-2016 18:49:48 UTC] PHP   3. file_get_contents() /home/ubuntu/workspace/backend/events_server_request.php:33
+[23-Oct-2016 18:49:48 UTC] PHP   3. file_get_contents() /home/ubuntu/workspace/backend/events_server_request.php:16
+[23-Oct-2016 18:49:48 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/common/event.php on line 53
+[23-Oct-2016 18:49:48 UTC] PHP Stack trace:
+[23-Oct-2016 18:49:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/backend/events_server_provider.php:0
+[23-Oct-2016 18:49:48 UTC] PHP   2. EventsServerRequest->getCells() /home/ubuntu/workspace/backend/events_server_provider.php:27
+[23-Oct-2016 18:49:48 UTC] PHP   3. CellCollection->__construct() /home/ubuntu/workspace/backend/events_server_request.php:17
+[23-Oct-2016 19:30:41 UTC] PHP Warning:  file_get_contents(http://54.191.15.168/v2/data/cells): failed to open stream: Connection timed out in /home/ubuntu/workspace/backend/events_server_request.php on line 16
+[23-Oct-2016 19:30:41 UTC] PHP Stack trace:
+[23-Oct-2016 19:30:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/backend/events_server_provider.php:0
+[23-Oct-2016 19:30:41 UTC] PHP   2. EventsServerRequest->getCells() /home/ubuntu/workspace/backend/events_server_provider.php:27
+[23-Oct-2016 19:30:41 UTC] PHP   3. file_get_contents(*uninitialized*) /home/ubuntu/workspace/backend/events_server_request.php:16
+[23-Oct-2016 19:30:41 UTC] PHP Warning:  file_get_contents(http://54.191.15.168/v2/stats/data): failed to open stream: Connection timed out in /home/ubuntu/workspace/backend/events_server_request.php on line 33
+[23-Oct-2016 19:30:41 UTC] PHP Stack trace:
+[23-Oct-2016 19:30:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/backend/events_server_provider.php:0
+[23-Oct-2016 19:30:41 UTC] PHP   2. EventsServerRequest->getStatistics() /home/ubuntu/workspace/backend/events_server_provider.php:40
+[23-Oct-2016 19:30:41 UTC] PHP   3. file_get_contents(*uninitialized*) /home/ubuntu/workspace/backend/events_server_request.php:33
+[23-Oct-2016 23:56:50 UTC] PHP Warning:  file_get_contents(http://54.191.15.168/v2/stats/data): failed to open stream: Connection timed out in /home/ubuntu/workspace/backend/events_server_request.php on line 45
+[23-Oct-2016 23:56:50 UTC] PHP Stack trace:
+[23-Oct-2016 23:56:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/backend/events_server_provider.php:0
+[23-Oct-2016 23:56:50 UTC] PHP   2. EventsServerRequest->getStatistics() /home/ubuntu/workspace/backend/events_server_provider.php:40
+[23-Oct-2016 23:56:50 UTC] PHP   3. file_get_contents() /home/ubuntu/workspace/backend/events_server_request.php:45
+[23-Oct-2016 23:56:50 UTC] PHP Warning:  file_get_contents(http://54.191.15.168/v2/data/cells): failed to open stream: Connection timed out in /home/ubuntu/workspace/backend/events_server_request.php on line 28
+[23-Oct-2016 23:56:50 UTC] PHP Stack trace:
+[23-Oct-2016 23:56:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/backend/events_server_provider.php:0
+[23-Oct-2016 23:56:50 UTC] PHP   2. EventsServerRequest->getCells() /home/ubuntu/workspace/backend/events_server_provider.php:27
+[23-Oct-2016 23:56:50 UTC] PHP   3. file_get_contents() /home/ubuntu/workspace/backend/events_server_request.php:28
+[23-Oct-2016 23:57:07 UTC] PHP Warning:  file_get_contents(http://54.191.15.168/v2/data/events?latlng=20.0625%2C99.895836&count=1): failed to open stream: Connection timed out in /home/ubuntu/workspace/backend/events_server_request.php on line 33
+[23-Oct-2016 23:57:07 UTC] PHP Stack trace:
+[23-Oct-2016 23:57:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/backend/events_server_provider.php:0
+[23-Oct-2016 23:57:07 UTC] PHP   2. EventsServerRequest->getEvent() /home/ubuntu/workspace/backend/events_server_provider.php:35
+[23-Oct-2016 23:57:07 UTC] PHP   3. file_get_contents() /home/ubuntu/workspace/backend/events_server_request.php:33
+[23-Oct-2016 23:57:19 UTC] PHP Warning:  file_get_contents(http://54.191.15.168/v2/data/events?latlng=20.0625%2C99.895836&count=1): failed to open stream: Connection timed out in /home/ubuntu/workspace/backend/events_server_request.php on line 33
+[23-Oct-2016 23:57:19 UTC] PHP Stack trace:
+[23-Oct-2016 23:57:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/backend/events_server_provider.php:0
+[23-Oct-2016 23:57:19 UTC] PHP   2. EventsServerRequest->getEvent() /home/ubuntu/workspace/backend/events_server_provider.php:35
+[23-Oct-2016 23:57:19 UTC] PHP   3. file_get_contents() /home/ubuntu/workspace/backend/events_server_request.php:33
+[23-Oct-2016 23:57:28 UTC] PHP Warning:  file_get_contents(http://54.191.15.168/v2/data/events?latlng=20.0625%2C99.895836&count=1): failed to open stream: Connection timed out in /home/ubuntu/workspace/backend/events_server_request.php on line 33
+[23-Oct-2016 23:57:28 UTC] PHP Stack trace:
+[23-Oct-2016 23:57:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/backend/events_server_provider.php:0
+[23-Oct-2016 23:57:28 UTC] PHP   2. EventsServerRequest->getEvent() /home/ubuntu/workspace/backend/events_server_provider.php:35
+[23-Oct-2016 23:57:28 UTC] PHP   3. file_get_contents() /home/ubuntu/workspace/backend/events_server_request.php:33
+[23-Oct-2016 23:57:44 UTC] PHP Warning:  file_get_contents(http://54.191.15.168/v2/data/events?latlng=20.0625%2C99.895836&count=1): failed to open stream: Connection timed out in /home/ubuntu/workspace/backend/events_server_request.php on line 33
+[23-Oct-2016 23:57:44 UTC] PHP Stack trace:
+[23-Oct-2016 23:57:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/backend/events_server_provider.php:0
+[23-Oct-2016 23:57:44 UTC] PHP   2. EventsServerRequest->getEvent() /home/ubuntu/workspace/backend/events_server_provider.php:35
+[23-Oct-2016 23:57:44 UTC] PHP   3. file_get_contents() /home/ubuntu/workspace/backend/events_server_request.php:33
