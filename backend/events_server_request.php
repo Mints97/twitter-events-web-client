@@ -8,7 +8,8 @@ interface IEventsServerRequest { // interface for events server communication
 }
 
 class EventsServerRequest implements IEventsServerRequest { // uses events server API as pers specifications provided
-    private $hostName = "http://54.191.15.168";
+    private $hostName = "http://127.0.0.1:8082";
+    // start with: cd events_server/Events-Server-Master; java -jar build/libs/events-server-0.0.1-SNAPSHOT.jar
     
     private $maxTweets = "10";
     

@@ -2,7 +2,7 @@
 require_once(dirname(__FILE__) . "/events_server_request.php");
 
 // uncomment following for visual testing
- require_once(dirname(__FILE__) . "/../test/test_backend_classes.php");
+// require_once(dirname(__FILE__) . "/../test/test_backend_classes.php");
 
 /*
 Web Client Local API
